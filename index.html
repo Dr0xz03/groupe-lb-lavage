@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Groupe LB Lavage</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --green: #1e5833;
+      --blue: #1573b6;
+      --light-gray: #f4f4f4;
+      --white: #fff;
+      --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: var(--light-gray);
+      color: #333;
+    }
+
+    header {
+      background: var(--green);
+      color: var(--white);
+      text-align: center;
+      padding: 40px 20px;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    header img {
+      width: 100px;
+      margin-bottom: 10px;
+      border-radius: 50%;
+    }
+
+    nav {
+      background: var(--white);
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 0;
+      border-bottom: 1px solid #ccc;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      animation: slideIn 1s ease-out;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--green);
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--blue);
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeIn 1s ease-in;
+    }
+
+    h2 {
+      color: var(--green);
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li::before {
+      content: "✔️ ";
+      margin-right: 8px;
+    }
+
+    .card {
+      background: var(--white);
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      margin-bottom: 30px;
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact input, .contact textarea {
+      padding: 12px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .contact button {
+      background: var(--blue);
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact button:hover {
+      background: #105a94;
+    }
+
+    .tarifs ul li {
+      padding: 10px 0;
+      font-weight: bold;
+    }
+
+    footer {
+      background: var(--green);
+      color: var(--white);
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    .icon {
+      color: var(--blue);
+      margin-right: 10px;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.jpeg" alt="Logo Groupe LB Lavage" />
+    <h1>Groupe LB Lavage</h1>
+    <p>Un bac propre, c’est plus sain!</p>
+  </header>
+
+  <nav>
+    <a href="#services"><i class="fas fa-broom icon"></i>Services</a>
+    <a href="#about"><i class="fas fa-users icon"></i>À propos</a>
+    <a href="#tarifs"><i class="fas fa-dollar-sign icon"></i>Tarifs</a>
+    <a href="#contact"><i class="fas fa-envelope icon"></i>Contact</a>
+  </nav>
+
+  <section id="services" class="card">
+    <h2>Nos Services</h2>
+    <p>Nous offrons un nettoyage professionnel pour :</p>
+    <ul>
+      <li>Bacs de recyclage</li>
+      <li>Bacs d’ordures</li>
+      <li>Bacs de compost</li>
+    </ul>
+    <p>Notre service est rapide, éco-responsable et élimine les odeurs désagréables.</p>
+  </section>
+
+  <section id="about" class="card">
+    <h2>À propos de nous</h2>
+    <p>Nous sommes deux jeunes entrepreneurs passionnés par la propreté et l’environnement.</p>
+    <p><strong>Charles</strong> : expérience en entretien résidentiel, fiable et ponctuel.</p>
+    <p><strong>Liam</strong> : service à la clientèle, organisation et attention au détail.</p>
+  </section>
+
+  <section id="tarifs" class="card tarifs">
+    <h2>Tarifs</h2>
+    <ul>
+      <li>1 bac : 20 $</li>
+      <li>2 bacs : 40 $</li>
+      <li>3 bacs (avec rabais) : 50 $</li>
+    </ul>
+    <p>Contactez-nous pour les offres saisonnières ou les forfaits de voisinage!</p>
+  </section>
+
+  <section id="contact" class="card contact">
+    <h2>Contact</h2>
+    <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 20px;">
+      <a href="tel:+14385421113" style="flex: 1; text-align: center; background: #28a745; color: white; padding: 12px; border-radius: 5px; text-decoration: none; font-weight: bold;">
+        📞 Appeler maintenant
+      </a>
+      <a href="mailto:charleslaflamme10@gmail.com" style="flex: 1; text-align: center; background: #007bff; color: white; padding: 12px; border-radius: 5px; text-decoration: none; font-weight: bold;">
+        📧 Contacter maintenant
+      </a>
+    </div>
+    <p style="width: 100%; text-align: center; margin-top: 10px;">
+      📞 <strong>438-542-1113</strong><br>
+      📧 <strong>charleslaflamme10@gmail.com</strong>
+    </p>
+    <form action="#" method="POST">
+      <input type="text" placeholder="Votre nom" required />
+      <input type="email" placeholder="Votre adresse courriel" required />
+      <textarea placeholder="Votre message" rows="5" required></textarea>
+      <button type="submit"><i class="fas fa-paper-plane"></i> Envoyer</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Groupe LB Lavage. Tous droits réservés.</p>
+  </footer>
+
+</body>
+</html>
