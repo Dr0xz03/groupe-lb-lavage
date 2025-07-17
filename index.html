@@ -1,118 +1,79 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Groupe LB Lavage</title>
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f3f4f6;
+      margin: 0;
+      padding: 0;
+      background: #f7f7f7;
       color: #333;
     }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
     nav {
-      background-color: #1f2937;
+      background: #1a252f;
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
-      padding: 1rem;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      gap: 20px;
+      padding: 10px;
     }
     nav a {
       color: white;
       text-decoration: none;
       font-weight: bold;
     }
-    nav a:hover {
-      text-decoration: underline;
+    section {
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    header {
-      background-color: #1f2937;
+    h1, h2 {
+      color: #2c3e50;
+    }
+    img.logo {
+      display: block;
+      margin: 10px auto;
+      border-radius: 50%;
+      height: 100px;
+    }
+    .cta-button {
+      display: block;
+      background: #3498db;
       color: white;
       text-align: center;
-      padding: 2rem 1rem 1rem;
-    }
-    header img {
-      max-width: 120px;
-      height: auto;
-      border-radius: 50%;
-      transition: transform 0.5s ease;
-    }
-    header img:hover {
-      transform: scale(1.1);
-    }
-    header h1 {
-      margin: 0.5rem 0 0;
-      font-size: 1.8rem;
-    }
-    header p {
-      font-style: italic;
-      font-size: 1rem;
-      margin: 0.5rem 0;
-    }
-    section {
-      padding: 2rem 1rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    .services, .about, .contact {
-      background-color: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-      margin-bottom: 2rem;
-      padding: 1.5rem;
-    }
-    h2 {
-      color: #1f2937;
-    }
-    ul {
-      padding-left: 1.5rem;
-    }
-    .tarifs {
-      background-color: #e5e7eb;
-      border-radius: 10px;
-      padding: 1rem;
-      margin: 1rem 0;
-    }
-    .contact-btn {
-      background-color: #2563eb;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 8px;
+      padding: 10px 20px;
       text-decoration: none;
-      font-size: 1rem;
-      display: block;
-      margin: 10px auto 0 auto;
+      border-radius: 5px;
+      margin: 20px auto;
+      width: fit-content;
     }
     footer {
-      background-color: #1f2937;
-      color: white;
       text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
-    @media screen and (max-width: 600px) {
-      header h1 {
-        font-size: 1.4rem;
-      }
-      nav {
-        flex-wrap: wrap;
-        gap: 1rem;
-      }
-      section {
-        padding: 1.5rem 1rem;
-      }
+      padding: 20px;
+      font-size: 14px;
+      color: #555;
     }
   </style>
 </head>
 <body>
+
+  <header>
+    <img src="logo.png" alt="Logo Groupe LB" class="logo">
+    <h1>Groupe LB Lavage</h1>
+    <p>Un bac propre, c’est plus sain.</p>
+  </header>
 
   <nav>
     <a href="#about">Qui nous sommes</a>
@@ -121,48 +82,40 @@
     <a href="#contact">Contactez-nous</a>
   </nav>
 
-  <header>
-    <img src="50E77D1D-6A43-4AEA-B418-0FA78CC91D67.PNG" alt="Logo Groupe LB Lavage" />
-    <h1>Groupe LB Lavage</h1>
-    <p>Un bac propre, c’est plus sain.</p>
-  </header>
-
-  <section class="about" id="about">
-    <h2>Qui sommes-nous ?</h2>
-    <p>Nous sommes Liam et Charles, deux jeunes entrepreneurs motivés du quartier L'Escarpement à Limbour. Nous offrons un service de lavage de bacs (ordures, compost, recyclage) propre, rapide et écoresponsable.</p>
+  <section id="about">
+    <h2>Qui nous sommes</h2>
+    <p>Nous sommes <strong>Charles</strong> et <strong>Liam</strong>, deux jeunes entrepreneurs motivés de l'Escarpement (Limbour) qui offrent un service de lavage écologique et efficace pour vos bacs de compost, recyclage et ordures.</p>
   </section>
 
-  <section class="services" id="services">
+  <section id="services">
     <h2>Nos services</h2>
-    <ul>
-      <li>Nettoyage professionnel des bacs bruns, verts, noirs et bleus</li>
-      <li>Élimination des mauvaises odeurs</li>
-      <li>Service rapide, fiable et local</li>
-      <li>Respect de l’environnement</li>
+    <ul style="list-style: none; padding: 0; font-size: 18px;">
+      <li>🟤 Nettoyage du bac brun (compost)</li>
+      <li>🔵 Nettoyage du bac bleu (recyclage)</li>
+      <li>⚫ Nettoyage du bac noir (ordures)</li>
+      <li>🟢 Nettoyage du bac vert (résidus de jardin)</li>
     </ul>
   </section>
 
-  <section class="services" id="tarifs">
+  <section id="tarifs">
     <h2>Tarifs</h2>
-    <div class="tarifs">
-      <ul>
-        <li>1 bac : 20 $</li>
-        <li>2 bacs : 40 $</li>
-        <li>3 bacs : 50 $ (rabais appliqué)</li>
-      </ul>
-    </div>
-    <p><strong>Offre spéciale :</strong> 5 $ de rabais pour les 10 premiers clients !</p>
+    <ul>
+      <li>1 bac = 20 $</li>
+      <li>2 bacs = 40 $</li>
+      <li>3 bacs = 50 $ (5 $ de rabais)</li>
+    </ul>
+    <p><strong>Offre spéciale :</strong> 5 $ de rabais pour les 10 premiers clients!</p>
   </section>
 
-  <section class="contact" id="contact">
+  <section id="contact">
     <h2>Contactez-nous</h2>
-    <p>📞 Téléphone : <a href="tel:4385431113">438-543-1113</a></p>
-    <p>📧 Courriel : <a href="mailto:charleslaflamme10@gmail.com">charleslaflamme10@gmail.com</a></p>
-    <a class="contact-btn" href="mailto:charleslaflamme10@gmail.com">Envoyer un courriel</a>
+    <p>Téléphone : <a href="tel:4385431113">438-543-1113</a></p>
+    <p>Email : <a href="mailto:charleslaflamme10@gmail.com">charleslaflamme10@gmail.com</a></p>
+    <a href="mailto:charleslaflamme10@gmail.com" class="cta-button">Envoyer un courriel</a>
   </section>
 
   <footer>
-    © 2025 Groupe LB Lavage | Site créé avec l’aide de ChatGPT
+    &copy; 2025 Groupe LB Lavage. Tous droits réservés.
   </footer>
 
 </body>
