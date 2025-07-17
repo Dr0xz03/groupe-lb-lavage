@@ -5,22 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Groupe LB Lavage</title>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: #f3f4f6;
       color: #333;
     }
+    nav {
+      background-color: #1f2937;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
     header {
       background-color: #1f2937;
       color: white;
       text-align: center;
-      padding: 1rem;
+      padding: 2rem 1rem 1rem;
     }
     header img {
       max-width: 120px;
       height: auto;
       border-radius: 50%;
+      transition: transform 0.5s ease;
+    }
+    header img:hover {
+      transform: scale(1.1);
     }
     header h1 {
       margin: 0.5rem 0 0;
@@ -77,6 +102,10 @@
       header h1 {
         font-size: 1.4rem;
       }
+      nav {
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
       section {
         padding: 1.5rem 1rem;
       }
@@ -85,27 +114,37 @@
 </head>
 <body>
 
+  <nav>
+    <a href="#about">Qui nous sommes</a>
+    <a href="#services">Nos services</a>
+    <a href="#tarifs">Tarifs</a>
+    <a href="#contact">Contactez-nous</a>
+  </nav>
+
   <header>
-    <img src="50E77D1D-6A43-4AEA-B418-0FA78CC91D67.PNG" alt="Logo Groupe LB Lavage" />
+    <img src="logo.png" alt="Logo Groupe LB Lavage" />
     <h1>Groupe LB Lavage</h1>
     <p>Un bac propre, c’est plus sain.</p>
   </header>
 
-  <section class="about">
+  <section class="about" id="about">
     <h2>Qui sommes-nous ?</h2>
     <p>Nous sommes Liam et Charles, deux jeunes entrepreneurs motivés du quartier L'Escarpement à Limbour. Nous offrons un service de lavage de bacs (ordures, compost, recyclage) propre, rapide et écoresponsable.</p>
   </section>
 
-  <section class="services">
+  <section class="services" id="services">
     <h2>Nos services</h2>
     <ul>
-      <li>Nettoyage professionnel des bacs bruns, verts et noirs</li>
+      <li>Nettoyage professionnel des bacs bruns, verts, noirs et bleus</li>
       <li>Élimination des mauvaises odeurs</li>
       <li>Service rapide, fiable et local</li>
       <li>Respect de l’environnement</li>
     </ul>
+  </section>
+
+  <section class="services" id="tarifs">
+    <h2>Tarifs</h2>
     <div class="tarifs">
-      <h3>Tarifs</h3>
       <ul>
         <li>1 bac : 20 $</li>
         <li>2 bacs : 40 $</li>
@@ -115,7 +154,7 @@
     <p><strong>Offre spéciale :</strong> 5 $ de rabais pour les 10 premiers clients !</p>
   </section>
 
-  <section class="contact">
+  <section class="contact" id="contact">
     <h2>Contactez-nous</h2>
     <p>📞 Téléphone : <a href="tel:4385431113">438-543-1113</a></p>
     <p>📧 Courriel : <a href="mailto:charleslaflamme10@gmail.com">charleslaflamme10@gmail.com</a></p>
